@@ -3,13 +3,13 @@ import { GlobalStyles } from './styles/GlobalStyles'
 
 import { CategoryList } from './components/CategoryList'
 import { Logo } from './components/Logo'
-import { PhotoCardList } from './components/PhotoCardList'
+import { PhotoCardList } from './container/PhotoCardList'
 
 export const App = () => (
   <div>
     <GlobalStyles />
     <Logo />
     <CategoryList />
-    <PhotoCardList />
+    <PhotoCardList categoryId={1} />
   </div>
 )

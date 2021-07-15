@@ -3,12 +3,13 @@ import { Context } from '../Context'
 import { UserForm } from '../components/UserForm'
 import { LoginMutation } from '../container/LoginMutation'
 import { RegisterMutation } from '../container/RegisterMutation'
+import { Layout } from '../components/Layout'
 
 export const NotRegisteredUser = () => {
   const { activateAuth } = useContext(Context)
 
   return (
-    <>
+    <Layout title='Para ingresar debe registrarse o iniciar sesion'>
       <RegisterMutation>
         {
           (register, { data, loading, error }) => {
@@ -44,6 +45,6 @@ export const NotRegisteredUser = () => {
           }
         }
       </LoginMutation>
-    </>
+    </Layout>
   )
 }
